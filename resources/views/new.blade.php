@@ -1,4 +1,4 @@
-@extends('app')
+@extends('index')
 
 @section('css')
 
@@ -19,7 +19,7 @@
   <div class="form_wrapper">
     <form action="{{ route('room.create') }}" method="POST">
     @csrf
-      <!-- コメント入れる -->
+      <!-- 既に存在するゲーム名を入力した場合のフラッシュメッセージ -->
       @if(session('message'))
       <div class="alert alert-danger">
         {{ session('message') }}

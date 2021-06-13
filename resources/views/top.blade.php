@@ -1,4 +1,4 @@
-@extends('app')
+@extends('index')
 
 @section('css')
 
@@ -20,6 +20,6 @@
     <br>
     <a class="btn_top" href='./golf/join'>Join the game</a>
   </div>
-  
+
 </div>
 @endsection

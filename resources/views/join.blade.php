@@ -1,4 +1,4 @@
-@extends('app')
+@extends('index')
 
 @section('css')
 
@@ -19,7 +19,7 @@
   <div class="form_wrapper">
     <form action="{{ route('room.check') }}" method="POST">
     @csrf
-      <!--  -->
+      <!-- ゲーム名またはパスワードが一致しない場合のフラッシュメッセージ -->
       @if(session('message'))
       <div class="alert alert-danger">
         {{ session('message') }}

@@ -4,11 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-import Vue from 'vue'  //追加
-import router from '/router'  //追加
-
 require('./bootstrap');
-require('./ajax.js');
 
 window.Vue = require('vue').default;
 
@@ -31,7 +27,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-new Vue({
+const app = new Vue({
     el: '#app',
-    router: router
 });
