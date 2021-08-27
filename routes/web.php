@@ -34,7 +34,7 @@ Route::get('/golf/join', function () {
 
 Route::post('/golf/join', 'RoomController@join')->name("room.check");
 
-Route::get('/golf/room/{id}', 'RoomController@into')->name("room.into");
+Route::get('/golf/room/{id}', 'RoomController@into')->name("room.into")->where('id', '[0-9]+');
 
 Route::post('/golf/room/update', 'RoomPlayerController@update')->name("room.update");
     //Ajaxで実行するメソッドのルーティング
