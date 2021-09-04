@@ -53,8 +53,11 @@ class RoomController extends Controller
         $password = $request->password;
 
         //ゲーム名またはパスワードが一致しない場合のフラッシュメッセージ
-        if (!Room::where('name', $name)->where('password', $password)->exists()) {
-          return redirect()->route('room.join')->with('message', 'ゲーム名またはパスワードが一致しません');
+        if (!Room::where('name', $name)->where('password', $password)->exists())
+        {
+          return redirect()->route('room.join')->with(
+            ['message' => 'ゲーム名またはパスワードが一致しません'],
+            );
         }
 
         $room = Room::where('name', $name)->where('password', $password)->first();
